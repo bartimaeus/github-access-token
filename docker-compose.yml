@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  ruby:
+    build: .
+    ports:
+      - 8080:4567
+    volumes:
+      - .:/api
+    environment:
+      - GH_BASIC_CLIENT_ID=[CLIENT_ID]
+      - GH_BASIC_SECRET_ID=[CLIENT_SECRET]
